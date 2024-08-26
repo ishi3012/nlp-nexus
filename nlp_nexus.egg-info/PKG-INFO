@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: nlp_nexus
+Version: 0.1.0
+Summary: NLP Nexus: A collection of advanced NLP projects.
+Home-page: https://github.com/ishi3012/nlp-nexus
+Author: Shilpa Musale
+Author-email: ishishiv3012@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: numpy>=1.23.1
+Requires-Dist: pandas>=1.5.1
+Requires-Dist: scikit-learn>=1.1.1
+Requires-Dist: nltk>=3.7
+Requires-Dist: flask>=2.2.3
+Requires-Dist: tensorflow>=2.9.1
+Requires-Dist: transformers>=4.20.1
+Requires-Dist: torch>=1.11.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.1.2; extra == "dev"
+Requires-Dist: black>=22.3.0; extra == "dev"
+Requires-Dist: flake8>=4.0.1; extra == "dev"

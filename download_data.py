@@ -69,7 +69,7 @@ if __name__ == "__main__":
     manager.download_dataset("McAuley-Lab/Amazon-Reviews-2023", config_name="raw_review_All_Beauty")
     
     # Save the dataset to the 'data' directory within the project
-    manager.save_dataset("nlp-nexus/Sentiment-Analysis/data/amazon_reviews_2023")
+    manager.save_dataset("Sentiment-Analysis/data/raw")
     
     # Verify saving
     dataset = manager.get_dataset()
