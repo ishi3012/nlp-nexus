@@ -12,3 +12,9 @@ node_modules/
 
 # Ignore system files
 .DS_Store
+
+venv/
+
+# Ignore the entire data directory
+Sentiment-Analysis/data/
+
