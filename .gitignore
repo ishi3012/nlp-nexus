@@ -18,3 +18,4 @@ venv/
 # Ignore the entire data directory
 Sentiment-Analysis/data/
 
+Sentiment-Analysis/data/
