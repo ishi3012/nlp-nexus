@@ -1,5 +1,0 @@
-[console_scripts]
-evaluate-qa = question_answering.evaluate:main
-evaluate-sentiment = sentiment_analysis.evaluate:main
-train-qa = question_answering.train:main
-train-sentiment = sentiment_analysis.train:main
