@@ -14,8 +14,3 @@ node_modules/
 .DS_Store
 
 venv/
-
-# Ignore the entire data directory
-Sentiment-Analysis/data/
-
-Sentiment-Analysis/data/
