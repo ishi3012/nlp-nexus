@@ -5,8 +5,13 @@ tensorflow>=2.6.0
 torch>=1.10.0
 transformers>=4.11.0
 matplotlib>=3.4.0
+nltk>=3.6.0
+emoji>=1.5.0
+spacy>=3.0.0
+textblob>=0.15.3
 
 [dev]
 pytest>=6.2.0
 sphinx>=4.0.0
 tox>=3.24.0
+coverage>=5.5

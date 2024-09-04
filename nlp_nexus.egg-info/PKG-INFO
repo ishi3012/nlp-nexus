@@ -19,10 +19,15 @@ Requires-Dist: tensorflow>=2.6.0
 Requires-Dist: torch>=1.10.0
 Requires-Dist: transformers>=4.11.0
 Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: nltk>=3.6.0
+Requires-Dist: emoji>=1.5.0
+Requires-Dist: spacy>=3.0.0
+Requires-Dist: textblob>=0.15.3
 Provides-Extra: dev
 Requires-Dist: pytest>=6.2.0; extra == "dev"
 Requires-Dist: sphinx>=4.0.0; extra == "dev"
 Requires-Dist: tox>=3.24.0; extra == "dev"
+Requires-Dist: coverage>=5.5; extra == "dev"
 
 # NLP Nexus
 

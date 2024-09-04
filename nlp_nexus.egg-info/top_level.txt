@@ -1,2 +1,1 @@
-nlp-nexus
-tests
+nlp_nexus
