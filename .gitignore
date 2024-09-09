@@ -14,3 +14,9 @@ node_modules/
 .DS_Store
 
 venv/
+
+build/
+dist/
+*.egg-info/
+*.pyc
+__pycache__/
