@@ -73,6 +73,9 @@ class TextPreprocessor:
 
         """
 
+        if not isinstance(series, pd.Series):
+            raise ValueError("Input must be a pandas Series.")
+
         # precompile regex patterns for efficiency
         url_pattern = re.compile(r'https?://\S+|www\.\S+')
         html_pattern = re.compile(r'<.*?>')        
@@ -117,6 +120,9 @@ class TextPreprocessor:
             - pd.Series             : A Pandas series that contains text with no punctuation marks. 
 
         """
+        if not isinstance(series, pd.Series):
+            raise ValueError("Input must be a pandas Series.")
+
         # precompile regex pattern
         punctuation_pattern = re.compile(r'[^\w\s]')
 
@@ -140,6 +146,9 @@ class TextPreprocessor:
             - pd.Series    : A Pandas series that contains text with no numbers. 
 
         """
+        if not isinstance(series, pd.Series):
+            raise ValueError("Input must be a pandas Series.")
+
         # precompile regex pattern
         number_pattern = re.compile(r'\d+')
 
@@ -162,6 +171,9 @@ class TextPreprocessor:
 
             - pd.Series      : A Pandas series where each entry is a list of word tokens.
         """
+        if not isinstance(series, pd.Series):
+            raise ValueError("Input must be a pandas Series.")
+            
         series = series.apply(word_tokenize)
 
         return series
@@ -178,6 +190,9 @@ class TextPreprocessor:
         Returns:
             -  pd.Series                    : A Pandas Series where stopwords have been removed from the input series.
         """
+        if not isinstance(series, pd.Series):
+            raise ValueError("Input must be a pandas Series.")
+            
         if language != LanguageOption.ENGLISH:
             raise ValueError(f"Unsupported language '{LanguageOption.ENGLISH}'. Only 'english' is currently supported.")
         
@@ -201,6 +216,9 @@ class TextPreprocessor:
             - pd.Series                         : A Pandas series where each word in the tokens is stemmed. 
         """
 
+        if not isinstance(series, pd.Series):
+            raise ValueError("Input must be a pandas Series.")
+            
         series = tokenized_series.apply(lambda tokens: [self._stemmer.stem(word) for word in tokens])
 
         return series
@@ -219,6 +237,9 @@ class TextPreprocessor:
         pd.Series
             A pandas Series where each word in the tokens is lemmatized.
         """
+        if not isinstance(series, pd.Series):
+            raise ValueError("Input must be a pandas Series.")
+            
         return tokens_series.apply(lambda tokens: [self._lemmatizer.lemmatize(word) for word in tokens])
 
     def preprocess_text(self, series: pd.Series) -> pd.Series:
@@ -237,6 +258,10 @@ class TextPreprocessor:
         pd.Series
             A pandas Series where each entry is a list of preprocessed word tokens.
         """
+        
+        if not isinstance(series, pd.Series):
+            raise ValueError("Input must be a pandas Series.")
+            
         series = self._clean_text(series)
         series = self._remove_punctuation(series)
         series = self._remove_numbers(series)

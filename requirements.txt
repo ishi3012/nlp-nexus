@@ -17,8 +17,10 @@ flask==3.0.3
 django==5.1
 requests==2.32.3
 beautifulsoup4==4.12.3
-textblob==0.17.1
 gensim==4.3.3
 openai==1.42.0
 emoji==2.0.0
 pytest==7.0.0
+contractions
+textblob
+pyspellchecker

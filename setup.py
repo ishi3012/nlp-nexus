@@ -1,15 +1,15 @@
 from setuptools import setup, find_packages
 from setuptools.command.install import install
-import nltk
+#import nltk
 
-# class PostInstallCommand(install):
-#     """Post-installation for downloading NLTK stopwords."""
-#     def run(self):
-#         install.run(self)
-#         # Download NLTK data
-#         nltk.download('punkt')
-#         nltk.download('stopwords')
-#         nltk.download('wordnet')
+class PostInstallCommand(install):
+    """Post-installation for downloading NLTK stopwords."""
+    def run(self):
+        install.run(self)
+        # Download NLTK data
+        nltk.download('punkt')
+        nltk.download('stopwords')
+        nltk.download('wordnet')
 
 setup(
     name="nlp-nexus",
@@ -43,7 +43,10 @@ setup(
         'spacy>=3.0.0',
         'emoji==2.0.0',
         'pytest==7.0.0',
-        'textblob>=0.15.3'
+        'textblob>=0.15.3',
+        'contractions',
+        'pyspellchecker',
+        
     ],
     cmdclass={
         'install': PostInstallCommand,
